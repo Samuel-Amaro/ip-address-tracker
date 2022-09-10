@@ -15,12 +15,24 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <!--styles pattern-->
     <link rel="stylesheet" href="./css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!--leaflet-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
     <title>Frontend Mentor | IP Address Tracker</title>
   </head>
   <body>
-
     <main class="main">
       <header class="header">
         <h1 class="title">IP Address Tracker</h1>
@@ -30,6 +42,7 @@
             placeholder="Search for any IP address or domain"
             aria-label="Search for any IP address or domain"
             class="input"
+            pattern="(^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$)|((?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9])"
           />
           <button
             type="button"
@@ -46,7 +59,7 @@
             IP Address
           </p>
           <p
-            class="result"
+            class="result result__ip-addres"
             aria-live="assertive"
             aria-atomic="true"
             aria-labelledby="result-ip-address"
@@ -56,7 +69,7 @@
         <div class="main__group-result">
           <p class="label" id="location" aria-label="Location">Location</p>
           <p
-            class="result"
+            class="result result__location"
             aria-live="assertive"
             aria-atomic="true"
             aria-labelledby="location"
@@ -67,29 +80,31 @@
           <!-- add offset value dynamically using the API -->
           <p class="label" id="timezone" aria-label="Timezone">Timezone</p>
           <p
-            class="result"
+            class="result result__timezone"
             aria-live="assertive"
             aria-atomic="true"
             aria-labelledby="timezone"
-          >
-            UTC
-          </p>
+          ></p>
         </div>
         <span class="column-diviser"></span>
         <div class="main__group-result">
           <p class="label" id="isp" aria-label="Isp">ISP</p>
           <p
-            class="result"
+            class="result result__isp"
             aria-live="assertive"
             aria-atomic="true"
             aria-labelledby="isp"
           ></p>
         </div>
       </div>
-      <div class="map" aria-live="assertive" aria-atomic="true" aria-label="Geolocation from ip ou domain">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque a, delectus similique dolores error odit repellendus quam dolor repudiandae? Unde saepe aspernatur mollitia natus rem officia ab iure, ipsam in! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita eveniet similique harum. Fuga incidunt facere repellat blanditiis, facilis necessitatibus temporibus, consequuntur iste totam deserunt beatae dicta excepturi laborum voluptatum quos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat laborum quis eos dolore, facere accusantium quibusdam iusto quasi a debitis, quidem ipsum cupiditate culpa at fuga. Maiores, quod sed. Non? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit culpa dolorem, dolore sapiente quas consequuntur expedita doloribus non perferendis odio! Corrupti minima sequi debitis praesentium soluta modi provident excepturi tenetur?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam porro ipsum provident tenetur, iusto laborum, debitis quis amet qui rerum libero voluptas rem explicabo molestiae illum praesentium maxime eligendi sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, blanditiis? Quae id corporis maxime fugit numquam molestiae accusamus expedita! Atque enim, similique unde quis optio repellendus nihil eos possimus fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem provident ad dolore nulla minus veniam deleniti, magni qui illum, cum quam velit possimus dignissimos aspernatur, debitis neque perspiciatis iusto quas. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione repudiandae sunt numquam suscipit earum? Vel ducimus reiciendis quam dolores? Praesentium facere facilis impedit, est at magni alias. Sed, ratione voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos harum adipisci delectus blanditiis facere inventore optio ea necessitatibus dolorum expedita atque, possimus reiciendis deleniti facilis labore maxime tenetur officiis totam.
-      </div>
+      <div
+        class="map"
+        aria-live="assertive"
+        aria-atomic="true"
+        aria-label="Geolocation from ip ou domain"
+      ></div>
     </main>
 
+    <script src="./js/app.js" type="module"></script>
   </body>
 </html>
