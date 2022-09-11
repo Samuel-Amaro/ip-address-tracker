@@ -15,7 +15,7 @@ function initializeStart() {
     response.then((data) => {
         setViewResults(data);
     }).catch((err) => {
-        console.log("Error fetching information related to your IP address");
+        console.log("Error fetching information related to your IP address " + err);
     });
 }
 
@@ -41,11 +41,18 @@ function handlerClickBtn(event) {
     if(value.trim() === '') {
         alert("Please enter an IP address or a domain!");
     }else{
-        let response = geolocationIp(value, validateInput(value));
-        response.then((response) => {
-            setViewResults(response);
+        let result = geolocationIp(value, validateInput(value));
+        result.then((data) => {
+            if(data === null) {
+                alert("Please enter a valid URL or domain.");
+            }else{
+                setViewResults(data);
+            }
         }).catch((reason) => {
-            console.log(reason);
+            //endereço ip e domain correpondem ao formato, mas não existem
+            console.log(
+              "Failed to fetch location information related to entered ip address or domain, please check if your entered domain or ip address really exists "
+            );
         });
     }
 }
