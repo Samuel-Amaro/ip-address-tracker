@@ -1,7 +1,6 @@
 "use strict";
 
 const API_KEY = "at_lDWHjeYx2yxf0TMCOwcJoqq9WtXnf";
-;
 let map = null;
 
 export async function geolocationIp(valueSearch, searchRequest) {
@@ -37,7 +36,7 @@ export async function geolocationIp(valueSearch, searchRequest) {
       }
     }
     //limited request 1000
-    if(response.status === 403) {
+    if (response.status === 403) {
       alert(
         "I apologize but my plan to use the location API and free, and that limits me to only 1000 query request, if you are seeing this message, my limit is probably already reached. :("
       );
