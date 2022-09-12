@@ -1,6 +1,7 @@
 "use strict";
 
-const API_KEY = "at_XU2YyLuIScz1hNcDctSp8APQQg0eT";
+const API_KEY = "at_lDWHjeYx2yxf0TMCOwcJoqq9WtXnf";
+;
 let map = null;
 
 export async function geolocationIp(valueSearch, searchRequest) {
@@ -18,10 +19,8 @@ export async function geolocationIp(valueSearch, searchRequest) {
   }
   try {
     let response = await fetch(url);
-    console.log(response);
-    if (response.status == 200) {
+    if (response.status === 200) {
       objectIp = await response.json();
-      console.log(objectIp);
       if (map === null) {
         map = initMap(
           objectIp.location.lat,
@@ -36,6 +35,12 @@ export async function geolocationIp(valueSearch, searchRequest) {
       } else {
         setMap(objectIp.location.lat, objectIp.location.lng, objectIp.location);
       }
+    }
+    //limited request 1000
+    if(response.status === 403) {
+      alert(
+        "I apologize but my plan to use the location API and free, and that limits me to only 1000 query request, if you are seeing this message, my limit is probably already reached. :("
+      );
     }
     return objectIp;
   } catch (error) {

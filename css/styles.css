@@ -69,7 +69,7 @@ html {
 }
 
 .input {
-  font-size: 18px; /*18px*/
+  font-size: 14px; /*18px*/
   font-weight: 400;
   padding: 18.5px 0 18.5px 24px;
   border-radius: 15px 0 0 15px;
@@ -182,6 +182,7 @@ html {
   }
 
   .input {
+    font-size: 18px;
     max-width: 497px;
     width: 100%;
     padding: 18px 0 18px 24px;
@@ -203,7 +204,6 @@ html {
     padding: 36px 32px 34px 32px;
     display: flex;
     flex-flow: row nowrap;
-    overflow: auto;
   }
 
   .label {
@@ -229,7 +229,7 @@ html {
   }
 
   .main__group-result:nth-of-type(1) .result {
-    width: 189px;
+    width: 193px;
   }
 
   .main__group-result:nth-of-type(2),
@@ -251,7 +251,7 @@ html {
   }
 
   .result {
-    height: 65px;
+    height: 66px;
     overflow-y: auto;
   }
 
