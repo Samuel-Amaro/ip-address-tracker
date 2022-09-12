@@ -45,8 +45,7 @@ export async function geolocationIp(valueSearch, searchRequest) {
   } catch (error) {
     //domain ou ip addres não existe, correponse ao formato mas não existe
     alert(
-      "There was an error fetching related information or IP address provided to your domain. " +
-        error
+      "There was an error fetching related information or IP address provided to your domain. "
     );
   }
 }

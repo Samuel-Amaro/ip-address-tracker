@@ -13,13 +13,12 @@ let input = document.querySelector(".input");
 function initializeStart() {
   let response = geolocationIp("", "none");
   response
-    .then((data) => {
+    .then(data => {
       setViewResults(data);
     })
-    .catch((err) => {
+    .catch(err => {
       alert(
-        "Error fetching information related to your IP address. If you have adBlock activated in your browser, please deactivate it to use this app, adBlock blocks ipfy IP address location service, after deactivating your adBlock please reload the page again. To find out why this happens, https://github.com/rdegges/ipify-api/issues/51 " +
-          err
+        "Error fetching information related to your IP address. If you have adBlock activated in your browser, please deactivate it to use this app, adBlock blocks ipfy IP address location service, after deactivating your adBlock please reload the page again. To find out why this happens, https://github.com/rdegges/ipify-api/issues/51 "
       );
     });
 }
