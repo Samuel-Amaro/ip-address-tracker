@@ -138,19 +138,19 @@ html {
 }
 
 /*active states*/
-  .btn:hover {
-    background-color: var(--very-dark-gray);
-    cursor: pointer;
-  }
+.btn:hover {
+  background-color: var(--very-dark-gray);
+  cursor: pointer;
+}
 
-  .input:hover {
-    cursor: pointer;
-  }
+.input:hover {
+  cursor: pointer;
+}
 
-  .input:focus,
-  .btn:focus {
-    outline: none;
-  }
+.input:focus,
+.btn:focus {
+  outline: none;
+}
 
 /*breakpoint 375px*/
 @media screen and (min-width: 375px) {
@@ -162,6 +162,13 @@ html {
 
   .main__results {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .map {
+    min-height: 100vh;
+    height: 100%;
   }
 }
 
@@ -253,9 +260,5 @@ html {
   .result {
     height: 66px;
     overflow-y: auto;
-  }
-
-  .map {
-    height: 520px;
   }
 }
